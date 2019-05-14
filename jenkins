@@ -1,0 +1,16 @@
+#start jenkins as a container with in a pod the name of the container should be myjnenkins
+#and map container port 8080 with host machine port=8888 and give the name of the pod as api-jenkins
+apiVersion: apps/v1
+kind: Pod
+metadata: 
+  name: api-jenkin
+  lables:
+   ci: cd
+spec:
+  containers:
+  - name: myjenkins
+    image: jenkins
+    ports:
+     - containerport: 8080
+       hostport: 8888
+       
