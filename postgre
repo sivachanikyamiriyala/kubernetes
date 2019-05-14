@@ -1,0 +1,17 @@
+#craete a pod definition fiel which uses postgre image and start the contaienr with name called postgre and name of the pod service should be myapp-postgre
+api Version: v1
+kind: Pod
+metadata:
+  name: myapp-postgre 
+  lables:
+   tier: db-ter
+spec:
+  containers: 
+  - name: postgre
+    image: postgre
+#to create a above pod
+#kubectl create -f filename.yml
+#to delete the service deployed using the aboce file
+#kubectl delete -f filename.yml
+
+   
