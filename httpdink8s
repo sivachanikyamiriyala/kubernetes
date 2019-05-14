@@ -10,4 +10,5 @@ spec:
   containers:
   - name: webserver
     image: httpd
-   
+#To deploy the above pod file
+#kubectl create -f filename.yml
