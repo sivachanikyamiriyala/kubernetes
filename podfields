@@ -1,0 +1,4 @@
+apiversion: That is the version of k8s api that is used to create the object
+kind:this represents the kind of objects that is getting created that is pod controller service etc
+metadata: data about the object created it also creates information to the lables these can  be used for filtering and searching for specific pods
+spec:This stands for specifications which contains information about the docker image container etc
