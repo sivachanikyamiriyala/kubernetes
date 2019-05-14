@@ -1,0 +1,15 @@
+#create a pod definition fiel for starting mysql as a container give the naem of the container as mydb and pass the default environment variable and give the name of the pod as myapp-mysql
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: myapp-mysql
+  lables:
+   dbname: mysql
+spec: 
+  containers:
+  - name: mydb
+    image: mysql:5
+    env:
+     - name: MYSQL_ROOT_PASSWORD
+       value: admin123
+       
