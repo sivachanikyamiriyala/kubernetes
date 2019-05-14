@@ -1,0 +1,12 @@
+#download a war file from nexus
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+spec:
+  containers:
+  - name: tomcat
+    image: nexus:8081/nexus/student.war
+    imagepullpolicy: Always
+  imagepullsecrets:
+   - name: nexusrepo
